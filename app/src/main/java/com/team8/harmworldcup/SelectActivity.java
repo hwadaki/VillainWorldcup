@@ -1,5 +1,6 @@
 package com.team8.harmworldcup;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,8 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -18,6 +24,7 @@ import java.util.Stack;
 public class SelectActivity extends AppCompatActivity {
     TextView choiceText1, choiceText2;
     Button choiceBtn1, choiceBtn2, backButton;
+    ImageButton choiceImagebtn1,choiceImagebtn2;
 
     Stack<Integer> history_stack = new Stack<>();
     static Queue<Integer> choiceQueue = new LinkedList<>();
@@ -65,9 +72,31 @@ public class SelectActivity extends AppCompatActivity {
 
         choiceBtn1 = findViewById(R.id.choiceBtn1);
         choiceBtn2 = findViewById(R.id.choiceBtn2);
+        choiceImagebtn1 = findViewById(R.id.choiceImagebtn1);
+        choiceImagebtn2 = findViewById(R.id.choiceImagebtn2);
         backButton = findViewById(R.id.backButton);
         choiceText1 = findViewById(R.id.choiceText1);
         choiceText2 = findViewById(R.id.choiceText2);
+
+        YouTubePlayerView youTubePlayerView1 = findViewById(R.id.youtube_player1);
+        getLifecycle().addObserver(youTubePlayerView1);
+        youTubePlayerView1.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+            @Override
+            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                String videoId1 = "H4JoKFmqakc";
+                youTubePlayer.cueVideo(videoId1, 0);
+            }
+        });
+
+        YouTubePlayerView youTubePlayerView2 = findViewById(R.id.youtube_player2);
+        getLifecycle().addObserver(youTubePlayerView2);
+        youTubePlayerView2.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+            @Override
+            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                String videoId2 = "H4JoKFmqakc";
+                youTubePlayer.cueVideo(videoId2, 0);
+            }
+        });
 
         String[] villains_name = getResources().getStringArray(R.array.villain); //{"test1","test2","test3","test4","test5","test6","test7","test8","test9","test10"};
         String[] youtube_id = getResources().getStringArray(R.array.youtube_id); //사진의 경우 "None" 문자열
@@ -93,6 +122,24 @@ public class SelectActivity extends AppCompatActivity {
 
         choiceText1.setText(villains_name[num1]);
         choiceText2.setText(villains_name[num2]);
+
+        if(!youtube_id[num1].equals("None")){
+            youTubePlayerView1.setVisibility(View.VISIBLE);
+            choiceImagebtn1.setVisibility(View.GONE);
+        } else{
+            youTubePlayerView1.setVisibility(View.GONE);
+            choiceImagebtn1.setVisibility(View.VISIBLE);
+            //사진 변경 추가 필요
+        }
+
+        if(!youtube_id[num2].equals("None")){
+            youTubePlayerView2.setVisibility(View.VISIBLE);
+            choiceImagebtn2.setVisibility(View.GONE);
+        } else{
+            youTubePlayerView2.setVisibility(View.GONE);
+            choiceImagebtn2.setVisibility(View.VISIBLE);
+            //사진 변경 추가 필요
+        }
 
         choiceBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,6 +175,41 @@ public class SelectActivity extends AppCompatActivity {
 
                     choiceText1.setText(villains_name[num1]);
                     choiceText2.setText(villains_name[num2]);
+
+                    if(!youtube_id[num1].equals("None")){
+                        youTubePlayerView1.setVisibility(View.VISIBLE);
+                        choiceImagebtn1.setVisibility(View.GONE);
+
+                        youTubePlayerView1.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+                            @Override
+                            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                                String videoId1 = youtube_id[num1];
+                                youTubePlayer.loadVideo(videoId1, 0);
+                            }
+                        });
+                    } else{
+                        youTubePlayerView1.setVisibility(View.GONE);
+                        choiceImagebtn1.setVisibility(View.VISIBLE);
+
+                        //사진 변경 추가 필요
+                    }
+
+                    if(!youtube_id[num2].equals("None")){
+                        youTubePlayerView2.setVisibility(View.VISIBLE);
+                        choiceImagebtn2.setVisibility(View.GONE);
+                        youTubePlayerView2.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+                            @Override
+                            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                                String videoId1 = youtube_id[num2];
+                                youTubePlayer.loadVideo(videoId1, 0);
+                            }
+                        });
+                    } else{
+                        youTubePlayerView2.setVisibility(View.GONE);
+                        choiceImagebtn2.setVisibility(View.VISIBLE);
+
+                        //사진 변경 추가 필요
+                    }
 
                 } else{
                     Intent endintent = new Intent(getApplicationContext(), EndActivity.class);
@@ -185,6 +267,40 @@ public class SelectActivity extends AppCompatActivity {
 
                     choiceText1.setText(villains_name[num1]);
                     choiceText2.setText(villains_name[num2]);
+
+                    if(!youtube_id[num1].equals("None")){
+                        youTubePlayerView1.setVisibility(View.VISIBLE);
+                        choiceImagebtn1.setVisibility(View.GONE);
+                        youTubePlayerView1.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+                            @Override
+                            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                                String videoId1 = youtube_id[num1];
+                                youTubePlayer.loadVideo(videoId1, 0);
+                            }
+                        });
+                    } else{
+                        youTubePlayerView1.setVisibility(View.GONE);
+                        choiceImagebtn1.setVisibility(View.VISIBLE);
+
+                        //사진 변경 추가 필요
+                    }
+
+                    if(!youtube_id[num2].equals("None")){
+                        youTubePlayerView2.setVisibility(View.VISIBLE);
+                        choiceImagebtn2.setVisibility(View.GONE);
+                        youTubePlayerView2.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+                            @Override
+                            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                                String videoId1 = youtube_id[num2];
+                                youTubePlayer.loadVideo(videoId1, 0);
+                            }
+                        });
+                    } else{
+                        youTubePlayerView2.setVisibility(View.GONE);
+                        choiceImagebtn2.setVisibility(View.VISIBLE);
+
+                        //사진 변경 추가 필요
+                    }
                 }
                 else{
                     Intent endintent = new Intent(getApplicationContext(), EndActivity.class);

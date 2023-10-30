@@ -32,6 +32,19 @@
 
     <ImageButton
         android:id="@+id/choiceImagebtn1"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player1"
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:layout_marginBottom="4dp"
@@ -71,9 +84,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <ImageButton
         android:id="@+id/choiceImagebtn2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player2"
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:layout_marginBottom="4dp"
