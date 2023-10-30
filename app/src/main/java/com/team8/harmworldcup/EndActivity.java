@@ -21,11 +21,13 @@ public class EndActivity extends AppCompatActivity {
         restartBtn = findViewById(R.id.restartBtn);
         endText = findViewById(R.id.endText);
 
+        String[] villains_name = getResources().getStringArray(R.array.villain);
+
         Intent intent = getIntent();
 
         Integer winner = intent.getIntExtra("winner",-1);
 
-        endText.setText((winner+1)+"번 우승");
+        endText.setText(villains_name[winner]+" 우승");
 
 
         restartBtn.setOnClickListener(new View.OnClickListener() {

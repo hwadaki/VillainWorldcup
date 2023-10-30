@@ -7,33 +7,108 @@
     android:orientation="vertical"
     tools:context=".SelectActivity">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="학교 올 때 마주치기 싫은 대중교통 빌런 월드컵 \n --강 (n/m)"
+            android:textSize="16sp"
+            android:layout_marginTop="7dp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="뒤로가기" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/choiceImagebtn1"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/choiceText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="choice1" />
 
     <Button
         android:id="@+id/choiceBtn1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="선택 1"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:text="선택 1" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewVS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="VS"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/choiceImagebtn2"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/choiceText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="Choice2" />
 
     <Button
         android:id="@+id/choiceBtn2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="선택2"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:text="선택2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="11dp"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="UnknownId" />
+
 </LinearLayout>

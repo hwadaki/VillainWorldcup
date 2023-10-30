@@ -1,33 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".SelectActivity">
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView0_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/backButton_width"
+            android:gravity="center"
+            android:text="  학교 올 때 마주치기 싫은 대중교통 빌런 월드컵 --강 (n/m)"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/backButton_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="뒤로가기" />
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/choiceImagebtn1_width"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="132dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ImageContrastCheck,MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:id="@+id/choiceText1_width"
+        android:layout_width="320dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="choice1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="279dp" />
 
     <Button
-        android:id="@+id/choiceBtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="선택 1" />
+        android:id="@+id/choiceBtn1_width"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:text="선택 1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="322dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewVS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_gravity="center"
+        android:layout_marginTop="196dp"
+        android:gravity="center_horizontal"
+        android:text="VS"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/choiceImagebtn2_width"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="132dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/choiceText2_width"
+        android:layout_width="320dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="choice2"
+        tools:layout_editor_absoluteX="411dp"
+        tools:layout_editor_absoluteY="279dp" />
 
     <Button
-        android:id="@+id/choiceBtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="선택2" />
-</LinearLayout>
+        android:id="@+id/choiceBtn2_width"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:text="선택 2"
+        tools:layout_editor_absoluteX="411dp"
+        tools:layout_editor_absoluteY="322dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="11dp"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnknownId"
+        tools:layout_editor_absoluteY="384dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
