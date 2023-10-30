@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="531dp"
         android:layout_gravity="center"
-        android:src="@drawable/startImg" />
+        android:src="@drawable/startimg" />
 
     <Spinner
         android:id="@+id/selectGang"
