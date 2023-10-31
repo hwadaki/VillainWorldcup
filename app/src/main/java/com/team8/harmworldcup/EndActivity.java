@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class EndActivity extends AppCompatActivity {
 
     Button restartBtn,bracketBtn;
@@ -32,6 +34,8 @@ public class EndActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         Integer winner = intent.getIntExtra("winner",-1);
+        int[] history = intent.getIntArrayExtra("history");
+        Integer ThreeResult = intent.getIntExtra("ThreeResult",-1);
 
         endText.setText(villains_name[winner]+" 우승");
 
@@ -52,6 +56,9 @@ public class EndActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent bracketintent = new Intent(getApplicationContext(), BracketActivity.class);
+                bracketintent.putExtra("winner",winner);
+                bracketintent.putExtra("history",history);
+                bracketintent.putExtra("ThreeResult",ThreeResult);
 
                 startActivity(bracketintent);
             }

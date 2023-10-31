@@ -34,8 +34,8 @@ public class SelectActivity extends AppCompatActivity {
     Integer challenge = 0; //진행한 총 대결 수
 
     int[] array_start = new int[8];
-    int[] array_4gang, array_34; //시작, 4강, 결승 배열 기록
     int[] array_2gang = new int[2]; //34위전
+    int ThreeResult;
 
     int num1,num2; //현재 대결하는 대상
     View v_d;
@@ -168,6 +168,8 @@ public class SelectActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "이제 결승전입니다.", Toast.LENGTH_SHORT).show();
                         textViewGang.setText("결승전");
                         textViewnbym.setText("");
+
+                        ThreeResult = num1;
                     } else if(maxNum-challenge==2){ //3,4위전
                         AlertDialog.Builder d = new AlertDialog.Builder(SelectActivity.this);
 
@@ -252,6 +254,26 @@ public class SelectActivity extends AppCompatActivity {
                 } else{
                     Intent endintent = new Intent(getApplicationContext(), EndActivity.class);
                     endintent.putExtra("winner",num1);
+                    endintent.putExtra("ThreeResult",ThreeResult);
+
+                    history_stack.push(num1);
+                    history_stack.push(num2);
+
+                    int[] history;
+
+                    if(maxNum == 8){
+                        history = new int[16];
+                        for(int i=0;i<16;i++){
+                            history[15-i] = history_stack.pop();
+                        }
+                    } else {
+                        history = new int[8];
+                        for(int i=0;i<8;i++){
+                            history[7-i] = history_stack.pop();
+                        }
+                    }
+
+                    endintent.putExtra("history",history);
 
                     startActivity(endintent);
                 }
@@ -314,6 +336,8 @@ public class SelectActivity extends AppCompatActivity {
                         choiceQueue.offer(array_2gang[0]);
                         choiceQueue.offer(array_2gang[1]);
 
+                        ThreeResult = num2;
+
                     } else if(maxNum-challenge==3 || maxNum-challenge==2){ //준결승전
                         array_2gang[(maxNum-challenge-1)%2] = num2;
                         choiceQueue.offer(num1); //34위전꺼 먼저 추가
@@ -359,6 +383,26 @@ public class SelectActivity extends AppCompatActivity {
                 else{
                     Intent endintent = new Intent(getApplicationContext(), EndActivity.class);
                     endintent.putExtra("winner",num2);
+                    endintent.putExtra("ThreeResult",ThreeResult);
+
+                    history_stack.push(num1);
+                    history_stack.push(num2);
+
+                    int[] history;
+
+                    if(maxNum == 8){
+                        history = new int[16];
+                        for(int i=0;i<16;i++){
+                            history[15-i] = history_stack.pop();
+                        }
+                    } else {
+                        history = new int[8];
+                        for(int i=0;i<8;i++){
+                            history[7-i] = history_stack.pop();
+                        }
+                    }
+
+                    endintent.putExtra("history",history);
 
                     startActivity(endintent);
                 }

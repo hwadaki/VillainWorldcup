@@ -40,32 +40,32 @@
         <Button
             android:id="@+id/Eightgang1"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:text="단소"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
 
         <Button
             android:id="@+id/Eightgang3"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:text="김치"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
         <Button
             android:id="@+id/Eightgang5"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:text="어게인"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
 
         <Button
             android:id="@+id/Eightgang7"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:text="십자군"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -108,32 +108,32 @@
         <Button
             android:id="@+id/Eightgang2"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:text="권총"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
 
         <Button
             android:id="@+id/Eightgang4"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:text="댄스"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
         <Button
             android:id="@+id/Eightgang6"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:text="자르반"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
 
         <Button
             android:id="@+id/Eightgang8"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:text="소주깡"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -171,7 +171,7 @@
             android:layout_height="40dp"
             android:layout_marginRight="-30dp"
             android:text="단소살인마"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
 
         <TextView
             android:layout_width="90dp"
@@ -185,7 +185,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="-30dp"
             android:text="김치플로우"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
     </TableRow>
 
     <TableRow
@@ -199,7 +199,7 @@
             android:layout_height="40dp"
             android:layout_marginRight="-30dp"
             android:text="어게인 어게인"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
 
         <TextView
             android:layout_width="90dp"
@@ -213,7 +213,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="-30dp"
             android:text="십자군"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
     </TableRow>
 
     <TableRow
@@ -249,24 +249,24 @@
         <Button
             android:id="@+id/Threegang1"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginRight="-30dp"
             android:text="김치플로우"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
 
         <TextView
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:text="VS"
             android:textSize="20dp" />
         <Button
             android:id="@+id/Threegang2"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="-30dp"
             android:text="어게인 어게인"
-            android:textSize="10dp" />
+            android:textSize="13dp" />
     </TableRow>
 
     <TableRow
@@ -283,9 +283,7 @@
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
+        android:layout_height="match_parent">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -302,10 +300,10 @@
         <Button
             android:id="@+id/final1"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="80dp"
             android:layout_marginRight="-30dp"
             android:text="단소살인마"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="90dp"
@@ -316,10 +314,10 @@
         <Button
             android:id="@+id/final2"
             android:layout_width="90dp"
-            android:layout_height="40dp"
+            android:layout_height="80dp"
             android:layout_marginLeft="-30dp"
             android:text="십자군"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
     </TableRow>
 
 </TableLayout>

@@ -2,7 +2,10 @@ package com.team8.harmworldcup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class BracketActivity extends AppCompatActivity {
@@ -15,28 +18,64 @@ public class BracketActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_bracket);
 
-        Eightgang1 = findViewById(R.id.Eightgang1);
-        Eightgang2 = findViewById(R.id.Eightgang2);
-        Eightgang3 = findViewById(R.id.Eightgang3);
-        Eightgang4 = findViewById(R.id.Eightgang4);
-        Eightgang5 = findViewById(R.id.Eightgang5);
-        Eightgang6 = findViewById(R.id.Eightgang6);
-        Eightgang7 = findViewById(R.id.Eightgang7);
-        Eightgang8 = findViewById(R.id.Eightgang8);
+        int[] EightGang = {R.id.Eightgang1,R.id.Eightgang2,R.id.Eightgang3,R.id.Eightgang4,R.id.Eightgang5,R.id.Eightgang6,R.id.Eightgang7,R.id.Eightgang8};
+        int[] FourGang = {R.id.Fourgang1,R.id.Fourgang2,R.id.Fourgang3,R.id.Fourgang4};
+        int[] ThreeGang = {R.id.Threegang1,R.id.Threegang2};
+        int[] FinalGang = {R.id.final1, R.id.final2};
 
-        Fourgang1 = findViewById(R.id.Fourgang1);
-        Fourgang2 = findViewById(R.id.Fourgang2);
-        Fourgang3 = findViewById(R.id.Fourgang3);
-        Fourgang4 = findViewById(R.id.Fourgang4);
+        Intent intent = getIntent();
+        Integer winner = intent.getIntExtra("winner",-1);
+        Integer ThreeResult = intent.getIntExtra("ThreeResult",-1);
+        int[] history = intent.getIntArrayExtra("history");
 
-        Threegang1 = findViewById(R.id.Threegang1);
-        Threegang2 = findViewById(R.id.Threegang2);
+        String[] villains_name = getResources().getStringArray(R.array.villain);
 
-        final1 = findViewById(R.id.final1);
-        final2 = findViewById(R.id.final2);
+        if(history.length==16){ //8강 시작
+            for(int n=0; n<8 ; n++){
+                Button EightgangButton = findViewById(EightGang[n]);
+                EightgangButton.setText(villains_name[history[n]]);
 
+                if(history[(n/2)+8]==history[n]){
+                    EightgangButton.setBackgroundColor(Color.BLUE);
+                } else {
+                    EightgangButton.setBackgroundColor(Color.RED);
+                }
+            }
+            for(int n=0; n<4 ; n++){
+                Button FourgangButton = findViewById(FourGang[n]);
+                FourgangButton.setText(villains_name[history[8+n]]);
 
+                if(!(history[(n/2)+12]==history[n+8])){ //3,4위전에 없어야함
+                    FourgangButton.setBackgroundColor(Color.BLUE);
+                } else {
+                    FourgangButton.setBackgroundColor(Color.RED);
+                }
+            }
+            for(int n=0; n<2 ; n++){
+                Button ThreegangButton = findViewById(ThreeGang[n]);
+                ThreegangButton.setText(villains_name[history[12+n]]);
+
+                System.out.println(ThreeResult);
+
+                if(ThreeResult==history[n+12]){
+                    ThreegangButton.setBackgroundColor(Color.BLUE);
+                } else {
+                    ThreegangButton.setBackgroundColor(Color.RED);
+                }
+            }
+            for(int n=0; n<2 ; n++){
+                Button FinalgangButton = findViewById(FinalGang[n]);
+                FinalgangButton.setText(villains_name[history[14+n]]);
+
+                if(history[14+n]==winner){
+                    FinalgangButton.setBackgroundColor(Color.BLUE);
+                } else {
+                    FinalgangButton.setBackgroundColor(Color.RED);
+                }
+            }
+        }
     }
 }
