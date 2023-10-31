@@ -24,7 +24,7 @@ import java.util.Random;
 import java.util.Stack;
 
 public class SelectActivity extends AppCompatActivity {
-    TextView choiceText1, choiceText2;
+    TextView choiceText1, choiceText2, textViewGang,textViewnbym;
     Button choiceBtn1, choiceBtn2, backButton;
     ImageButton choiceImagebtn1,choiceImagebtn2;
 
@@ -82,6 +82,8 @@ public class SelectActivity extends AppCompatActivity {
         backButton = findViewById(R.id.backButton);
         choiceText1 = findViewById(R.id.choiceText1);
         choiceText2 = findViewById(R.id.choiceText2);
+        textViewGang = findViewById(R.id.textViewGang);
+        textViewnbym = findViewById(R.id.textViewnbym);
 
         YouTubePlayerView youTubePlayerView1 = findViewById(R.id.youtube_player1);
         getLifecycle().addObserver(youTubePlayerView1);
@@ -126,6 +128,9 @@ public class SelectActivity extends AppCompatActivity {
         choiceText1.setText(villains_name[num1]);
         choiceText2.setText(villains_name[num2]);
 
+        textViewGang.setText(maxNum+"강");
+        textViewnbym.setText("(1/"+(maxNum/2)+")");
+
         if(!youtube_id[num1].equals("None")){
             youTubePlayerView1.setVisibility(View.VISIBLE);
             choiceImagebtn1.setVisibility(View.GONE);
@@ -154,9 +159,11 @@ public class SelectActivity extends AppCompatActivity {
                 challenge += 1;
                 if(challenge<maxNum){
                     System.out.println(maxNum-challenge);
-                    if (maxNum-challenge==1) { //안내 문구용 조건문
+                    if (maxNum-challenge==1) { //결승전
                         Toast.makeText(getApplicationContext(), "이제 결승전입니다.", Toast.LENGTH_SHORT).show();
-                    } else if(maxNum-challenge==2){
+                        textViewGang.setText("결승전");
+                        textViewnbym.setText("");
+                    } else if(maxNum-challenge==2){ //3,4위전
                         AlertDialog.Builder d = new AlertDialog.Builder(SelectActivity.this);
 
                         d.setTitle("안내");
@@ -174,12 +181,21 @@ public class SelectActivity extends AppCompatActivity {
                                 });
                         d.show();
 
-                        Toast.makeText(getApplicationContext(), "이제 3,4위전입니다.", Toast.LENGTH_SHORT).show();
-                    } else if(maxNum-challenge==4){
+                        //Toast.makeText(getApplicationContext(), "이제 3,4위전입니다.", Toast.LENGTH_SHORT).show();
+                        textViewGang.setText("3,4위전");
+                        textViewnbym.setText("");
+                    } else if(maxNum-challenge==4){ //준결승전
                         Toast.makeText(getApplicationContext(), "이제 준결승전입니다.", Toast.LENGTH_SHORT).show();
+                        textViewGang.setText("4강");
+                        textViewnbym.setText("(1/2)");
+                    } else if(maxNum-challenge==3){
+                        textViewGang.setText("4강");
+                        textViewnbym.setText("(2/2)");
+                    } else{
+                        textViewnbym.setText("("+(challenge+1)+"/4)");
                     }
 
-                    if(maxNum-challenge==1){ //3,4위전
+                    if(maxNum-challenge==1){
                         choiceQueue.offer(array_2gang[0]); //다음 결승전 위해서 대결자들 추가
                         choiceQueue.offer(array_2gang[1]);
 
@@ -250,16 +266,41 @@ public class SelectActivity extends AppCompatActivity {
                 challenge += 1;
                 if(challenge<maxNum){
                     System.out.println(maxNum-challenge);
-                    if (maxNum-challenge==1) { //안내 문구용 조건문
-                        System.out.println("이제 결승전입니다.");
+                    if (maxNum-challenge==1) { //결승전
                         Toast.makeText(getApplicationContext(), "이제 결승전입니다.", Toast.LENGTH_SHORT).show();
-                    } else if(maxNum-challenge==2){
-                        System.out.println("이제 3,4위전입니다.");
-                        Toast.makeText(getApplicationContext(), "이제 3,4위전입니다.", Toast.LENGTH_SHORT).show();
+                        textViewGang.setText("결승전");
+                        textViewnbym.setText("");
 
-                    }
-                    else if(maxNum-challenge==4){
-                        System.out.println("이제 준결승전입니다.");
+                    } else if(maxNum-challenge==2){ //3,4위전
+                        AlertDialog.Builder d = new AlertDialog.Builder(SelectActivity.this);
+
+                        d.setTitle("안내");
+
+                        //View.inflate 이용하여 그 뷰에 해당하는 것을 '구현/실행'해주고,
+                        v_d = (View) View.inflate(SelectActivity.this, R.layout.dialog, null);
+                        //실행한 것을 setView 함수로 전달.
+                        d.setView(v_d);
+                        d.setPositiveButton("확인",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    }
+                                });
+                        d.show();
+
+                        //Toast.makeText(getApplicationContext(), "이제 3,4위전입니다.", Toast.LENGTH_SHORT).show();
+                        textViewGang.setText("3,4위전");
+                        textViewnbym.setText("");
+                    } else if(maxNum-challenge==4){ //준결승전
+                        Toast.makeText(getApplicationContext(), "이제 준결승전입니다.", Toast.LENGTH_SHORT).show();
+                        textViewGang.setText("4강");
+                        textViewnbym.setText("(1/2)");
+                    } else if(maxNum-challenge==3){
+                        textViewGang.setText("4강");
+                        textViewnbym.setText("(2/2)");
+                    } else{
+                        textViewnbym.setText("("+(challenge+1)+"/4)");
                     }
 
                     if(maxNum-challenge==1){ //3,4위전
@@ -358,6 +399,61 @@ public class SelectActivity extends AppCompatActivity {
 
                     choiceText1.setText(villains_name[num1]);
                     choiceText2.setText(villains_name[num2]);
+
+                    if(maxNum-challenge==2){ //3,4위전
+                        AlertDialog.Builder d = new AlertDialog.Builder(SelectActivity.this);
+
+                        d.setTitle("안내");
+
+                        //View.inflate 이용하여 그 뷰에 해당하는 것을 '구현/실행'해주고,
+                        v_d = (View) View.inflate(SelectActivity.this, R.layout.dialog, null);
+                        //실행한 것을 setView 함수로 전달.
+                        d.setView(v_d);
+                        d.setPositiveButton("확인",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    }
+                                });
+                        d.show();
+
+                        //Toast.makeText(getApplicationContext(), "이제 3,4위전입니다.", Toast.LENGTH_SHORT).show();
+                        textViewGang.setText("3,4위전");
+                        textViewnbym.setText("");
+                    } else if(maxNum-challenge==4){ //준결승전
+                        Toast.makeText(getApplicationContext(), "이제 준결승전입니다.", Toast.LENGTH_SHORT).show();
+                        textViewGang.setText("4강");
+                        textViewnbym.setText("(1/2)");
+                    } else if(maxNum-challenge==3){
+                        textViewGang.setText("4강");
+                        textViewnbym.setText("(2/2)");
+                    } else{
+                        textViewGang.setText("8강");
+                        textViewnbym.setText("("+(challenge+1)+"/4)");
+                    }
+
+                    if(!youtube_id[num1].equals("None")){
+                        youTubePlayerView1.setVisibility(View.VISIBLE);
+                        choiceImagebtn1.setVisibility(View.GONE);
+
+                        youtubeId1= youtube_id[num1];
+                    } else{
+                        youTubePlayerView1.setVisibility(View.GONE);
+                        choiceImagebtn1.setVisibility(View.VISIBLE);
+                        //사진 변경 추가 필요
+                    }
+
+                    if(!youtube_id[num2].equals("None")){
+                        youTubePlayerView2.setVisibility(View.VISIBLE);
+                        choiceImagebtn2.setVisibility(View.GONE);
+
+                        youtubeId2= youtube_id[num2];
+                    } else{
+                        youTubePlayerView2.setVisibility(View.GONE);
+                        choiceImagebtn2.setVisibility(View.VISIBLE);
+                        //사진 변경 추가 필요
+                    }
 
                 } else{
                     Toast.makeText(getApplicationContext(), "더 이상 뒤로갈 수 없습니다(처음)", Toast.LENGTH_SHORT).show();

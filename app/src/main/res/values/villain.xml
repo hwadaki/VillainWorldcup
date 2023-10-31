@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="gang">
+        <item>8강</item>
+        <item>4강</item>
+    </string-array>
     <string-array name="villain">
         <item>Again Again</item>
         <item>흑인 김치 플로우</item>

@@ -12,14 +12,45 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="학교 올 때 마주치기 싫은 대중교통 빌런 월드컵 \n --강 (n/m)"
+            android:text="학교 올 때 마주치기 싫은 대중교통 빌런 월드컵 "
             android:textSize="16sp"
-            android:layout_marginTop="7dp" />
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:id="@+id/textViewGang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="강"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewnbym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="160dp"
+            android:gravity="center_horizontal"
+            android:text="n/m"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/backButton"
@@ -27,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:text="뒤로가기" />
+            android:text="선택취소" />
+
     </RelativeLayout>
 
     <ImageButton
