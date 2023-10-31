@@ -12,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="40sp"
+        android:textSize="36sp"
         android:layout_marginTop="25dp"
-        android:textStyle="bold"
-        android:text="---우승!" />
+        android:fontFamily="@font/sb_aro_b"
+        android:text="Again Again 우승!" />
 
     <ImageView
         android:id="@+id/endImage"
@@ -29,6 +29,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/sb_aro_b"
         android:text="다시하기" />
 
     <Button
@@ -36,6 +37,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/sb_aro_b"
         android:text="대진표보기" />
 
 </LinearLayout>

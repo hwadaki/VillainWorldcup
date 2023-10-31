@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="학교 올 때 마주치기 싫은\n대중교통 빌런 월드컵"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:textSize="30sp"
+        android:fontFamily="@font/sb_aro_b"
+        android:layout_marginTop="16dp"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -26,13 +26,17 @@
         android:id="@+id/selectGang"
         android:layout_width="251dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/sb_aro_b"
+        android:textSize="17sp"
         android:layout_gravity="center" />
 
     <Button
         android:id="@+id/startBtn"
-        android:layout_width="115dp"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:layout_gravity="center"
-        android:text="시작하기" />
+        android:fontFamily="@font/sb_aro_b"
+        android:textSize="20sp"
+        android:text="시작하기!" />
 
 </LinearLayout>

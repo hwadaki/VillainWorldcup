@@ -3,6 +3,7 @@ package com.team8.harmworldcup;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_main);
 
         StartBtn = findViewById(R.id.startBtn);
+        StartBtn.setBackgroundColor(Color.RED);
         spinnerGang = findViewById(R.id.selectGang);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(

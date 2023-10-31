@@ -7,128 +7,65 @@
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView0_width"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sb_aro_b"
             android:gravity="center"
-            android:text="  학교 올 때 마주치기 싫은 대중교통 빌런 월드컵 강 (n/m)"
-            android:textSize="25sp"
+            android:text=" 학교 올 때 마주치기 싫은 대중교통 빌런"
+            android:textSize="27sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/textViewGang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="560dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/sb_aro_l"
+            android:gravity="center_horizontal"
+            android:text="강"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewnbym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="590dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/sb_aro_l"
+            android:gravity="center_horizontal"
+            android:text="n/m"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
-            android:id="@+id/backButton_width"
+            android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            android:text="뒤로가기" />
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/sb_aro_l"
+            android:text="선택취소" />
 
     </RelativeLayout>
 
-
-    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-        android:id="@+id/youtube_player1"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="132dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="ImageContrastCheck,MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"/>
-    <ImageButton
-        android:id="@+id/choiceImagebtn1"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="132dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="ImageContrastCheck,MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/choiceText1"
-        android:layout_width="320dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="choice1"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="279dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/choiceBtn1"
-        android:layout_width="320dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center"
-        android:text="선택 1"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="322dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textViewVS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="196dp"
-        android:gravity="center_horizontal"
-        android:text="VS"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-        android:id="@+id/youtube_player2"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="132dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="ImageContrastCheck,MissingConstraints" />
-
-
-    <ImageButton
-        android:id="@+id/choiceImagebtn2"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="132dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="ImageContrastCheck,MissingConstraints" />
-
-    <TextView
-        android:id="@+id/choiceText2"
-        android:layout_width="320dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="choice2"
-        tools:layout_editor_absoluteX="411dp"
-        tools:layout_editor_absoluteY="279dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/choiceBtn2"
-        android:layout_width="320dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center"
-        android:text="선택 2"
-        tools:layout_editor_absoluteX="411dp"
-        tools:layout_editor_absoluteY="322dp"
-        tools:ignore="MissingConstraints" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -136,11 +73,158 @@
         android:layout_width="match_parent"
         android:layout_height="11dp"
         android:max="100"
+        android:progress="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints,UnknownId"
-        tools:layout_editor_absoluteY="384dp" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:ignore="UnknownId" />
+
+    <WebView
+        android:id="@+id/youtube_player1"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/choiceImageView1"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/choiceSpace1"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/choiceText1"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="choice1"
+        android:textSize="20dp"
+        android:fontFamily="@font/sb_aro_b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceSpace1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/choiceBtn1"
+        android:layout_width="400dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:text="선택하기"
+        android:fontFamily="@font/sb_aro_b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceText1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewVS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="VS"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+
+    <WebView
+        android:id="@+id/youtube_player2"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/choiceImageView2"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/choiceSpace2"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/choiceText2"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="choice2"
+        android:textSize="20dp"
+        android:fontFamily="@font/sb_aro_b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceSpace2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/choiceBtn2"
+        android:layout_width="400dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:text="선택하기"
+        android:fontFamily="@font/sb_aro_b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceText2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
