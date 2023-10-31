@@ -12,6 +12,9 @@
         android:theme="@style/Theme.HarmWorldcup"
         tools:targetApi="34">
         <activity
+            android:name=".BracketActivity"
+            android:exported="false" />
+        <activity
             android:name=".EndActivity"
             android:exported="false" />
         <activity

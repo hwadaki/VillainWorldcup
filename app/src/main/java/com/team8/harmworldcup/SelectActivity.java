@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ import java.util.Stack;
 public class SelectActivity extends AppCompatActivity {
     TextView choiceText1, choiceText2, textViewGang,textViewnbym;
     Button choiceBtn1, choiceBtn2, backButton;
-    ImageButton choiceImagebtn1,choiceImagebtn2;
+    ImageView choiceImageView1,choiceImageView2;
 
     Stack<Integer> history_stack = new Stack<>();
     static Queue<Integer> choiceQueue = new LinkedList<>();
@@ -77,8 +78,8 @@ public class SelectActivity extends AppCompatActivity {
 
         choiceBtn1 = findViewById(R.id.choiceBtn1);
         choiceBtn2 = findViewById(R.id.choiceBtn2);
-        choiceImagebtn1 = findViewById(R.id.choiceImagebtn1);
-        choiceImagebtn2 = findViewById(R.id.choiceImagebtn2);
+        choiceImageView1 = findViewById(R.id.choiceImageView1);
+        choiceImageView2 = findViewById(R.id.choiceImageView2);
         backButton = findViewById(R.id.backButton);
         choiceText1 = findViewById(R.id.choiceText1);
         choiceText2 = findViewById(R.id.choiceText2);
@@ -133,24 +134,28 @@ public class SelectActivity extends AppCompatActivity {
 
         if(!youtube_id[num1].equals("None")){
             youTubePlayerView1.setVisibility(View.VISIBLE);
-            choiceImagebtn1.setVisibility(View.GONE);
+            choiceImageView1.setVisibility(View.GONE);
 
             youtubeId1= youtube_id[num1];
         } else{
             youTubePlayerView1.setVisibility(View.GONE);
-            choiceImagebtn1.setVisibility(View.VISIBLE);
-            //사진 변경 추가 필요
+            choiceImageView1.setVisibility(View.VISIBLE);
+
+            int img1 = getResources().getIdentifier("@drawable/villain_img_" + num1,"drawable", getPackageName());
+            choiceImageView1.setImageResource(img1);
         }
 
         if(!youtube_id[num2].equals("None")){
             youTubePlayerView2.setVisibility(View.VISIBLE);
-            choiceImagebtn2.setVisibility(View.GONE);
+            choiceImageView2.setVisibility(View.GONE);
 
             youtubeId2= youtube_id[num2];
         } else{
             youTubePlayerView2.setVisibility(View.GONE);
-            choiceImagebtn2.setVisibility(View.VISIBLE);
-            //사진 변경 추가 필요
+            choiceImageView2.setVisibility(View.VISIBLE);
+
+            int img2 = getResources().getIdentifier("@drawable/villain_img_" + num2,"drawable", getPackageName());
+            choiceImageView2.setImageResource(img2);
         }
 
         choiceBtn1.setOnClickListener(new View.OnClickListener() {
@@ -218,28 +223,30 @@ public class SelectActivity extends AppCompatActivity {
 
                     if(!youtube_id[num1].equals("None")){
                         youTubePlayerView1.setVisibility(View.VISIBLE);
-                        choiceImagebtn1.setVisibility(View.GONE);
+                        choiceImageView1.setVisibility(View.GONE);
 
                         youtubeId1= youtube_id[num1];
 
                     } else{
                         youTubePlayerView1.setVisibility(View.GONE);
-                        choiceImagebtn1.setVisibility(View.VISIBLE);
+                        choiceImageView1.setVisibility(View.VISIBLE);
 
-                        //사진 변경 추가 필요
+                        int img1 = getResources().getIdentifier("@drawable/villain_img_" + num1,"drawable", getPackageName());
+                        choiceImageView1.setImageResource(img1);
                     }
 
                     if(!youtube_id[num2].equals("None")){
                         youTubePlayerView2.setVisibility(View.VISIBLE);
-                        choiceImagebtn2.setVisibility(View.GONE);
+                        choiceImageView2.setVisibility(View.GONE);
 
                         youtubeId2= youtube_id[num2];
 
                     } else{
                         youTubePlayerView2.setVisibility(View.GONE);
-                        choiceImagebtn2.setVisibility(View.VISIBLE);
+                        choiceImageView2.setVisibility(View.VISIBLE);
 
-                        //사진 변경 추가 필요
+                        int img2 = getResources().getIdentifier("@drawable/villain_img_" + num2,"drawable", getPackageName());
+                        choiceImageView2.setImageResource(img2);
                     }
 
                 } else{
@@ -326,25 +333,27 @@ public class SelectActivity extends AppCompatActivity {
 
                     if(!youtube_id[num1].equals("None")){
                         youTubePlayerView1.setVisibility(View.VISIBLE);
-                        choiceImagebtn1.setVisibility(View.GONE);
+                        choiceImageView1.setVisibility(View.GONE);
                         youtubeId1= youtube_id[num1];
 
                     } else{
                         youTubePlayerView1.setVisibility(View.GONE);
-                        choiceImagebtn1.setVisibility(View.VISIBLE);
+                        choiceImageView1.setVisibility(View.VISIBLE);
 
-                        //사진 변경 추가 필요
+                        int img1 = getResources().getIdentifier("@drawable/villain_img_" + num1,"drawable", getPackageName());
+                        choiceImageView1.setImageResource(img1);
                     }
 
                     if(!youtube_id[num2].equals("None")){
                         youTubePlayerView2.setVisibility(View.VISIBLE);
-                        choiceImagebtn2.setVisibility(View.GONE);
+                        choiceImageView2.setVisibility(View.GONE);
                         youtubeId2= youtube_id[num2];
                     } else{
                         youTubePlayerView2.setVisibility(View.GONE);
-                        choiceImagebtn2.setVisibility(View.VISIBLE);
+                        choiceImageView2.setVisibility(View.VISIBLE);
 
-                        //사진 변경 추가 필요
+                        int img2 = getResources().getIdentifier("@drawable/villain_img_" + num2,"drawable", getPackageName());
+                        choiceImageView2.setImageResource(img2);
                     }
                 }
                 else{
@@ -435,24 +444,28 @@ public class SelectActivity extends AppCompatActivity {
 
                     if(!youtube_id[num1].equals("None")){
                         youTubePlayerView1.setVisibility(View.VISIBLE);
-                        choiceImagebtn1.setVisibility(View.GONE);
+                        choiceImageView1.setVisibility(View.GONE);
 
                         youtubeId1= youtube_id[num1];
                     } else{
                         youTubePlayerView1.setVisibility(View.GONE);
-                        choiceImagebtn1.setVisibility(View.VISIBLE);
-                        //사진 변경 추가 필요
+                        choiceImageView1.setVisibility(View.VISIBLE);
+
+                        int img1 = getResources().getIdentifier("@drawable/villain_img_" + num1,"drawable", getPackageName());
+                        choiceImageView1.setImageResource(img1);
                     }
 
                     if(!youtube_id[num2].equals("None")){
                         youTubePlayerView2.setVisibility(View.VISIBLE);
-                        choiceImagebtn2.setVisibility(View.GONE);
+                        choiceImageView2.setVisibility(View.GONE);
 
                         youtubeId2= youtube_id[num2];
                     } else{
                         youTubePlayerView2.setVisibility(View.GONE);
-                        choiceImagebtn2.setVisibility(View.VISIBLE);
-                        //사진 변경 추가 필요
+                        choiceImageView2.setVisibility(View.VISIBLE);
+
+                        int img2 = getResources().getIdentifier("@drawable/villain_img_" + num2,"drawable", getPackageName());
+                        choiceImageView2.setImageResource(img2);
                     }
 
                 } else{

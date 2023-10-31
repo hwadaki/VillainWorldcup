@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".BracketActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="30dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="8강"
+            android:textSize="30dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/Eightgang1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:text="단소"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/Eightgang3"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="김치"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/Eightgang5"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="어게인"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/Eightgang7"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="십자군"
+            android:textSize="10dp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="VS"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="VS"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="VS"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="VS"
+            android:textSize="20dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/Eightgang2"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:text="권총"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/Eightgang4"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="댄스"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/Eightgang6"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="자르반"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/Eightgang8"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="소주깡"
+            android:textSize="10dp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="30dp" />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:text="4강"
+            android:textSize="30dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp">
+
+        <Button
+            android:id="@+id/Fourgang1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="-30dp"
+            android:text="단소살인마"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="VS"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/Fourgang2"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="-30dp"
+            android:text="김치플로우"
+            android:textSize="10dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp">
+
+        <Button
+            android:id="@+id/Fourgang3"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="-30dp"
+            android:text="어게인 어게인"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="VS"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/Fourgang4"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="-30dp"
+            android:text="십자군"
+            android:textSize="10dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="30dp" />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:text="3·4위전"
+            android:textSize="25dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp">
+
+        <Button
+            android:id="@+id/Threegang1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="-30dp"
+            android:text="김치플로우"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="VS"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/Threegang2"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="-30dp"
+            android:text="어게인 어게인"
+            android:textSize="10dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="30dp" />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:text="결승"
+            android:textSize="30dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp">
+
+        <Button
+            android:id="@+id/final1"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="-30dp"
+            android:text="단소살인마"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="VS"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/final2"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="-30dp"
+            android:text="십자군"
+            android:textSize="10dp" />
+    </TableRow>
+
+</TableLayout>

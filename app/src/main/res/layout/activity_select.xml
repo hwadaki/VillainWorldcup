@@ -62,8 +62,8 @@
 
     </RelativeLayout>
 
-    <ImageButton
-        android:id="@+id/choiceImagebtn1"
+    <ImageView
+        android:id="@+id/choiceImageView1"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="240dp"
@@ -116,8 +116,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/choiceImagebtn2"
+    <ImageView
+        android:id="@+id/choiceImageView2"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="240dp"
