@@ -17,7 +17,7 @@ public class BracketActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_bracket);
 
         int[] EightGang = {R.id.Eightgang1,R.id.Eightgang2,R.id.Eightgang3,R.id.Eightgang4,R.id.Eightgang5,R.id.Eightgang6,R.id.Eightgang7,R.id.Eightgang8};
